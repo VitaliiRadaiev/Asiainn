@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Asiainn</title>
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- <meta name="robots" content="noindex, nofollow"> -->
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+		<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+		<link rel="stylesheet" href="css/style.min.css">
+	</head>
+	<body>
+		<div class="wrapper delivery2">
+			<main class="page">
+				<section class="delivery">
+					<div class="delivery__head head-delivery head-delivery_2">
+						<div class="head-delivery__link-back">
+							<a class="" href="#">Назад</a>
+						</div>
+						<div class="head-delivery__logo logo">
+							<a href="#">
+								<img src="img/logo/Logo.svg" alt="">
+							</a>
+						</div>
+						<div class="head-delivery__btn">
+							<a class="head-delivery-btn brown-btn" href="#">Вход<span>/</span>Регистрация</a>
+						</div>
+					</div>
+
+					<div class="delivery__body body-delivery">
+						<div class="body-delivery__column body-delivery__column_1">
+							<div class="body-delivery__aside aside-delivery2">
+								<div class="aside-delivery2__top">
+									<div class="aside-delivery2__tab active">
+										Самовывоз
+									</div>
+									<div class="aside-delivery2__tab">
+										Доставка
+									</div>
+								</div>
+								<div class="aside-delivery2__bottom">
+									<div class="aside-delivery2__tab-content active aside-delivery2-anchor">
+										<div class="aside-delivery2__adress">
+											<p>
+												Ресторан пан азиатской кухни
+											</p>
+											<p>
+												г. Москва, бульвар Генерала Карбышева, 15
+											</p>
+										</div>
+										<div class="aside-delivery2__schedule">
+											<p>
+												ПН - ПТ с 12:00 - 00:00
+											</p>
+											<p>
+												СБ - ВС с 10:00 - 00:00
+											</p>
+										</div>
+										<div class="aside-delivery2__btn-order">
+											<a class="aside-btn" href="#">Заказать</a>
+										</div>
+									</div>
+									<div class="aside-delivery2__tab-content">
+										<form action="/" class="aside-delivery2__form form-delivery2">
+											<div class="form-delivery2__inner">
+
+												<div class="form-delivery2__input-wrap">
+													<input autocomplete="off" type="text" name="form[]" data-value="Укажите адрес доставки" class="input">
+												</div>
+
+												<div class="form-delivery2__submit-wrap">
+													<button type="submit"><span><img src="img/icons/search.svg" alt=""></span></button>
+												</div>
+											</div>
+										</form>
+										<div class="aside-delivery2__btn-order">
+											<a class="aside-btn" href="#">Заказать</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="body-delivery__column body-delivery__column_2">
+							<div class="body-delivery__map" id="map" data-da="aside-delivery2-anchor,2,800"></div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		@@include('_popup.html')
+		@@include('_popupMess.html')
+		@@include('_popupRegistering.html')
+		@@include('_popupLogin.html')
+		<script src="js/libs.min.js"></script>
+		<script
+		  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+		  defer
+		></script>
+		<script src="js/main.min.js"></script>
+	</body>
+</html>

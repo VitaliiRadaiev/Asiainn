@@ -1,0 +1,57 @@
+@include font("Akrobat", "Akrobat-Black", "900", "normal");
+@include font("Akrobat", "Akrobat-Bold", "700", "normal");
+@include font("Akrobat-ExtraBold", "Akrobat-ExtraBold", "800", "normal");
+@include font("Akrobat-ExtraLight", "Akrobat-ExtraLight", "200", "normal");
+@include font("Akrobat", "Akrobat-Light", "300", "normal");
+@include font("Akrobat", "Akrobat-Regular", "400", "normal");
+@include font("Akrobat-SemiBold", "Akrobat-SemiBold", "700", "normal");
+@include font("Akrobat", "Akrobat-Thin", "100", "normal");
+@include font("Montserrat", "Montserrat-Black", "900", "normal");
+@include font("Montserrat", "Montserrat-Bold", "700", "normal");
+@include font("Montserrat-ExtraLight", "Montserrat-ExtraLight", "200", "normal");
+@include font("Montserrat", "Montserrat-Light", "300", "normal");
+@include font("Montserrat", "Montserrat-Medium", "500", "normal");
+@include font("Montserrat", "Montserrat-Regular", "400", "normal");
+@include font("Montserrat-SemiBold", "Montserrat-SemiBold", "700", "normal");
+@include font("Montserrat", "Montserrat-Thin", "100", "normal");
+
+
+@font-face {
+	font-family: 'OpelSans';
+	src: url('../fonts/Opelsans/OpelSans-BoldItalic.eot');
+	src: url('../fonts/Opelsans/OpelSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Opelsans/OpelSans-BoldItalic.woff') format('woff'),
+	url('../fonts/Opelsans/OpelSans-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'OpelSans';
+	src: url('../fonts/Opelsans/OpelSans-Regular.eot');
+	src: url('../fonts/Opelsans/OpelSans-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Opelsans/OpelSans-Regular.woff') format('woff'),
+	url('../fonts/Opelsans/OpelSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpelSans';
+	src: url('../fonts/Opelsans/OpelSans-Bold.eot');
+	src: url('../fonts/Opelsans/OpelSans-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Opelsans/OpelSans-Bold.woff') format('woff'),
+	url('../fonts/Opelsans/OpelSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url('../fonts/Opensans/OpenSans-Semibold.eot');
+	src: url('../fonts/Opensans/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Opensans/OpenSans-Semibold.woff') format('woff'),
+	url('../fonts/Opensans/OpenSans-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}

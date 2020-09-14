@@ -1,0 +1,154 @@
+
+
+
+
+// ==== MENU-TAVLE =====================================================
+.menu-table {
+	padding: 22px 0 155px;
+
+	@media (max-width: $md4+px) {
+		padding: 22px 0 50px;
+	}
+	&__body {
+		max-width: 810px;
+	}
+	&__nav {
+		padding: 30px 0;
+
+		@media (max-width: $md4+px) {
+			padding: 15px 0px;
+		}
+	}
+
+	&__main-list {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-bottom: 11px;
+
+		& li {
+			padding: 0 14px;
+
+			@media (max-width: $md4+px) {
+				padding: 0 10px;
+			}
+
+			& a {
+				@include title(18,700,29.97);
+				text-transform: uppercase;
+				color: $textColor;
+
+				@media (max-width: $md4+px) {
+					font-size: 16px;
+					line-height: 28px;
+				}
+
+				&.active {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&__sub-list {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		& li {
+			padding: 0 20px;
+
+			@media (max-width: $md4+px) {
+				padding: 0 10px;
+			}
+
+			& a {
+				@include text(16,400,30);
+				color: #878787;
+				letter-spacing: 1px;
+
+				@media (max-width: $md4+px) {
+					font-size: 12px;
+					line-height: 24px;
+				}
+
+				&.active {
+					color: $textColor;
+				}
+			}
+		}
+	}
+	&__item {
+		margin-bottom: 24px;
+	}
+}
+
+.item-menu {
+	color: $textColor;
+	padding: 20px 0;
+	&__title {
+		text-align: center;
+		@include title(30,700,30);
+		margin-bottom: 53px;
+		text-transform: none;
+
+		@media (max-width: $md4+px) {
+			font-size: 20px;
+			line-height: 20px;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+
+		& li {
+			width: 50%;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			@include title(22,700,25);
+			text-transform: none;
+			margin-bottom: 21px;
+
+			@media (max-width: $md4+px) {
+				width: 100%;
+				font-size: 14px;
+				line-height: 17px;
+			}
+
+			& > .item-menu__price {
+				display: block;
+				flex: 0 0 auto;
+				margin-left: 20px;
+				@include text(16,400,16);
+				text-transform: none;
+
+				@media (max-width: $md4+px) {
+					font-size: 11px;
+					line-height: 11px;
+					margin-left: 30px;
+				}
+			}
+
+			&:nth-child(odd) {
+				padding-right: 15px;
+
+				@media (max-width: $md4+px) {
+					padding-right: 0;
+				}
+			}
+
+			&:nth-child(even) {
+				padding-left: 15px;
+
+				@media (max-width: $md4+px) {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	&__price {}
+}
+
+// ==== AND MENU-TAVLE =====================================================

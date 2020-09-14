@@ -1,0 +1,15 @@
+.contact {
+	& .footer {
+		@media (max-width: $md3+px) {
+			margin-top: 51px;
+		}
+	}
+}
+.contact-map {
+	width: 100%;
+	min-height: 384px;
+
+	@media (max-width: $md4+px) {
+		min-height: 232px;
+	}
+}
