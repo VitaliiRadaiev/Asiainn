@@ -35,6 +35,26 @@
 
 	}
 
+	&.popupOrder {
+		&.popup{
+			background-color:  rgba(#fff, 0.99);
+		}
+
+		& .popup_body {
+			align-items: flex-start;
+			padding: 100px 30px;
+
+			@media (max-width: $md3+px) {
+				padding: 50px 15px;
+			}
+		}
+
+		& .popup_content {
+			max-width: 760px;
+			text-align: left;
+		}
+	}
+
 	&.open {
 		opacity: 1;
 		visibility: visible;

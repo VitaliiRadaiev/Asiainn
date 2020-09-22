@@ -97,6 +97,10 @@
 		}
 	}
 
+	&_4 {
+		
+	}
+
 	@media (max-width: 800px) {
 		padding: 0 20px;
 		min-height: 60px;
@@ -324,7 +328,7 @@
 	}*/
 
 
-	&.isMobile {
+	&.isAuthorized {
 		font-size: 0;
 		min-height: 40px;
 		min-width: 40px;

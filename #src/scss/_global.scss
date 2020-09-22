@@ -937,10 +937,262 @@ h6 {
 		}
 	}
 }
-.registering {
-}
-
-.login {
-}
 
 //===== and form-regist-log ===============================================
+
+
+//===== form-verifi ===============================================
+.form-verifi {
+	max-width: 836px;
+	border-radius: 3px;
+	background-color: #e1dfd9;
+	padding: 60px 65px 60px;
+	font-family: "Montserrat", serif;
+
+	@media (max-width: $md4+px) {
+		padding: 60px 15px 60px;
+	}
+
+	&__title {
+		font-size: 28px;
+		font-weight: 700;
+		margin-bottom: 18px;
+
+		& > a {
+			color: #767676;
+			&.active {
+				color: #2d2f31;
+			}
+		}
+	}
+	&__subtitle {
+		color: #2d2f31;
+		font-family: Montserrat;
+		font-size: 14px;
+		font-weight: 400;
+		margin-bottom: 14px;
+	}
+	&__item {
+		width: 100%;
+		margin-bottom: 16px;
+
+		&:last-child {
+			margin-top: -6px;
+		}
+
+		&_pass {
+			& .form-verifi__item-wrap {
+				&:before {
+					background: url(../img/icons/key.svg) center no-repeat;
+					background-size: contain;
+				}
+			}
+		}
+
+	}
+	&__item-wrap {
+		width: 100%;
+		min-height: 50px;
+		background: #fff;
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 0;
+			height: 36%;
+			width: 43px;
+			transform: translateY(-50%);
+		}
+
+		& .input {
+			color: #a5a5a5;
+			font-size: 22px;
+			font-weight: 400;
+			padding: 8px 43px;
+			letter-spacing: 1px;
+
+			&._focus {
+				color: #000;
+			}
+		}
+	}
+	&__submit-wrap {
+		width: 100%;
+
+		& button {
+			min-height: 60px;
+			width: 100%;
+			background-color: #43b749;
+			color: #fff;
+			@include title(18,700,18);
+			text-transform: uppercase;
+			direction: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 10px;
+		}
+	}
+	&__bottom {
+		line-height: 20px;
+		& > span {
+			display: block;
+			text-align: center;
+			font-weight: 700;
+			font-size: 14px;
+		}
+
+		& > a {
+			color: #43b749;
+			font-weight: 700;
+			font-size: 14px;
+			transition: all .2s ease;
+
+			@media (min-width: 992px) {
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+//===== and form-verifi ===============================================
+
+
+
+//===== popup order ===============================================
+.form-order2 {
+	font-family: "Akrobat", serif;
+	color: #000;
+
+
+	& .item-order__quantity {
+		display: inline-flex;
+		width: 137px;
+		height: 68px;
+		border-radius: 2px;
+		border: 1px solid #86a573;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 26px;
+
+		& .item-order__minus, .item-order__plus {
+			border: none;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		margin-bottom: 51px;
+
+		@media (max-width: $md3+px) {
+			display: block;
+		}
+	}
+	&__column {
+		&_1 {
+			flex: 0 0 390 / 760 * 100%;
+			min-height: 383px;
+
+			@media (max-width: $md3+px) {
+				display: none;
+			}
+		}
+		&_2 {
+			flex: 1 1 auto;
+			padding-left: 24px;
+			display: flex;
+			flex-direction: column;
+
+			@media (max-width: $md3+px) {
+				padding-left: 0;
+			}
+		}
+	}
+	&__img {
+		width: 100%;
+		height: 100%;
+
+		@media (max-width: $md3+px) {
+			width: 250px;
+			height: 250px;
+			margin: 25px 0;
+		}
+
+		@media (max-width: $md4+px) {
+			width: 150px;
+			height: 150px;
+		}
+	}
+	&__title {
+		font-size: 26px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+	&__desc {
+		font-family: 'Montserrat', serif;
+		font-size: 14px;
+		font-weight: 400;
+		flex: 1 1 auto;
+		line-height: 17px;
+	}
+	&__price {
+		color: #383e43;
+		font-size: 24px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 27px;
+	}
+	&__submit-wrap {
+		& .aside-btn {
+			font-size: 18px;
+			min-height: 80px;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+
+			& > span {
+				margin-left: 0;
+				height: auto;
+			}
+		}
+	}
+}
+
+.form-order2 {
+	&__comment {}
+}
+.comment-form-order2 {
+	min-height: 156px;
+	background-color: #e1dfd9;
+	padding: 10px;
+	padding-bottom: 43px;
+	&__title {
+		color: #383e43;
+		font-size: 22px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+	&__subtitle {
+		color: #a5a5a5;
+		font-family: 'Montserrat', serif;
+		font-size: 14px;
+		font-weight: 400;
+		margin-bottom: 10px;
+	}
+	&__mess {
+		resize: none;
+		width: 100%;
+		min-height: 50px;
+		padding: 10px;
+		background: #fff;
+	}
+}
+
+
+//===== and popup order ===============================================
