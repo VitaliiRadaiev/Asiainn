@@ -175,6 +175,11 @@ let spollers = document.querySelectorAll("._spoller");
 if (spollers.length > 0) {
 	for (let index = 0; index < spollers.length; index++) {
 		const spoller = spollers[index];
+
+		if(spoller.classList.contains('_active')) {
+			_slideDown(spoller.nextElementSibling);
+		}
+
 		spoller.addEventListener("click", function (e) {
 			if (spoller.classList.contains('_spoller-992') && window.innerWidth > 992) {
 				return false;
@@ -362,7 +367,7 @@ function digi_animate_value(el, start, end, duration) {
 // });
 // //=================
 //SlideToggle
-let _slideUp = (target, duration = 500) => {
+function _slideUp (target, duration = 500) {
 	target.style.transitionProperty = 'height, margin, padding';
 	target.style.transitionDuration = duration + 'ms';
 	target.style.height = target.offsetHeight + 'px';
@@ -386,7 +391,7 @@ let _slideUp = (target, duration = 500) => {
 		target.classList.remove('_slide');
 	}, duration);
 }
-let _slideDown = (target, duration = 500) => {
+function _slideDown (target, duration = 500)  {
 	target.style.removeProperty('display');
 	let display = window.getComputedStyle(target).display;
 	if (display === 'none')

@@ -4,10 +4,19 @@
 	& .delivery__head {
 		position: relative;
 	}
+
 }
+
+
 .form-delivery4 {
-	min-height: 100vh;
-	padding-bottom: 75px;
+	min-height: calc(100vh - 75px);
+	padding-bottom: 15px;
+	display: flex;
+	flex-direction: column;
+
+	@media (max-width: 800px) {
+		min-height: calc(100vh - 60px);
+	}
 }
 
 .body-delivery_4 {
@@ -22,10 +31,18 @@
 
 	&.delivery__body {
 		min-height: auto;
+			flex: 1 1 auto;
 	}
 
 	& .body-delivery__column {
 		width: 50%;
+
+		display: flex;
+		flex-direction: column;
+
+		& .expand {
+			flex: 1 1 auto;
+		}
 
 		@media (max-width: $md2+px) {
 			width: 100%;
@@ -71,26 +88,47 @@
 		color: #383e43;
 		font-size: 19px;
 		font-weight: 700;
-
 		position: relative;
 		padding-left: 24px;
 		line-height: 22px;
 		margin-bottom: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 
-		&:before {
-			position: absolute;
-			content: '';
-			top: 0;
-			left: 0;
-			width: 17px;
-			height: 22px;
-			background: url('../img/icons/location2.svg') center no-repeat;
-			background-size: contain;
+		@media (max-width: $md3+px) {
+			font-size: 14px;
+			line-height: 20px;
 		}
 
-		& > span {
-			font-size: 16px;
-			font-weight: 400;
+		& .text-wrap {
+
+			& > span {
+				font-size: 16px;
+				font-weight: 400;
+				margin-right: 15px;
+
+				@media (max-width: $md3+px) {
+					font-size: 13px;
+					margin-right: 10px;
+				}
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: 50%;
+				left: 0;
+				width: 17px;
+				height: 22px;
+				background: url('../img/icons/location2.svg') center no-repeat;
+				background-size: contain;
+				transform: translateY(-50%);
+			}
+		}
+
+		& .banner-delivery__btn-change {
+			margin: 10px 0 15px 10px;
 		}
 	}
 	&__map {
@@ -110,6 +148,14 @@
 		margin-bottom: 16px;
 		padding: 0 15px;
 
+		& label {
+			color: #a5a5a5;
+			font-size: 14px;
+			font-weight: 400;
+			display: block;
+			margin-bottom: 8px;
+		}
+
 		&_name {
 			& .order-box__input-wrap {
 				&:before {
@@ -128,6 +174,18 @@
 			& .order-box__input-wrap {
 				&:before {
 					background: url(../img/icons/arroba.svg) center no-repeat;
+					background-size: contain;
+					height: 37%;
+					top: 50%;
+					transform: translateY(-50%);
+				}				
+			}
+		}
+
+		&_birthday {
+			& .order-box__input-wrap {
+				&:before {
+					background: url(../img/icons/calendar2.svg)center no-repeat;
 					background-size: contain;
 					height: 37%;
 					top: 50%;
@@ -196,7 +254,7 @@
 
 			& .order-box__input-wrap {
 				&:before {
-					background: url(../img/icons/calendar.svg) center no-repeat;
+					background: url(../img/icons/calendar2.svg) center no-repeat;
 					background-size: contain;
 					height: 37%;
 					top: 50%;
@@ -212,7 +270,7 @@
 
 			& .order-box__input-wrap {
 				&:before {
-					background: url(../img/icons/calendar.svg) center no-repeat;
+					background: url(../img/icons/calendar2.svg) center no-repeat;
 					background-size: contain;
 					height: 37%;
 					top: 50%;
@@ -279,6 +337,80 @@
 					margin-left: 15px;
 				}
 			}
+		}
+	}
+}
+
+.accordion {
+	width: 100%;
+	background: #fff;
+	margin-bottom: 25px;
+	padding: 1px 0;
+
+	@media (max-width: $md2+px) {
+		margin-top: 10px;
+	}
+
+	& > ul {
+		& > li {
+			&:not(:last-child) {
+				border-bottom: 1px solid #cccccc;
+			}
+		}
+	}
+
+	&__main-title {
+		font-family: "Akrobat";
+		font-size: 22px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-top: 22px;
+		padding-left: 18px;
+		color: #383e43;
+	}
+
+	&__title {
+		padding-left: 18px;
+		padding-right: 9px;
+		min-height: 60px;
+		position: relative;
+		padding-right: 30px;
+		display: flex;
+		align-items: center;
+		color: #2d2f31;
+		font-size: 16px;
+		font-weight: 700;
+		cursor: pointer;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			right: 15px;
+			background: url(../img/icons/select-arrow2.svg) center/100% no-repeat;
+			width: 15px;
+			height: 10px;
+			background-size: contain;
+			transform: translateY(-50%);
+		}
+	}
+	&__collapse {
+		display: none;
+		font-weight: 400;
+		padding: 15px 0;
+
+		& .order-list {
+			padding-top: 0;
+			padding-bottom: 5px;
+			margin-bottom: 0;
+			& > li {
+				border-bottom: 1px solid #ccc;
+				padding-bottom: 13px;
+			}
+		}
+
+		& .basket__info-block {
+			margin-bottom: 0;
 		}
 	}
 }
