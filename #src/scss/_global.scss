@@ -890,6 +890,18 @@ h6 {
 			}
 		}
 
+		&_email {
+			& .form-regist-log__item-wrap {
+				&:before {
+					background: url(../img/icons/arroba.svg) center no-repeat;
+					background-size: contain;
+					height: 37%;
+					top: 50%;
+					transform: translateY(-50%);
+				}				
+			}
+		}
+
 	}
 	&__item-wrap {
 		width: 100%;
@@ -1196,3 +1208,12 @@ h6 {
 
 
 //===== and popup order ===============================================
+
+.agreement {
+	color: #2d2f31;
+	font-family: 'Montserrat', serif;
+	font-size: 14px;
+	font-weight: 400;
+	max-width: 561px;
+	margin: 25px auto;
+}
