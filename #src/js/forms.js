@@ -11,6 +11,7 @@ function form_submit(e) {
 	let form = btn.closest('form');
 	let message = form.getAttribute('data-message');
 	let error = form_validate(form);
+
 	if (error == 0) {
 		//SendForm
 		form_clean(form);
@@ -26,6 +27,7 @@ function form_submit(e) {
 		event.preventDefault();
 	}
 }
+
 function form_validate(form) {
 	let error = 0;
 	let form_req = form.querySelectorAll('._req');

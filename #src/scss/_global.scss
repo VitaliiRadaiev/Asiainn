@@ -281,6 +281,50 @@ h6 {
 	}
 
 }
+
+.btn-social {
+	display: inline-flex;
+	min-height: 50px;
+	border-radius: 25px;
+	background-color: #ffffff;
+	padding: 8px 16px;
+	text-align: left;
+	color: #6d4f2b;
+	align-items: center;
+	transition: all .2s ease;
+	opacity: 1;
+
+	@media (min-width: 992px) {
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+
+	&__icon {
+		flex: 0 0 24px;
+		margin-right: 7px;
+
+		& img {
+			width: 100%;
+		}
+	}
+	&__text {
+		flex: 1 1 auto;
+	}
+	&__text-lable {
+		width: 72px;
+		height: 8px;
+		@include text(10,700,10);
+		white-space: nowrap;
+		margin-bottom: 4px;
+		margin-left: 2px;
+	}
+	&__text-title {
+		@include text(16,700,16);
+	}
+}
+
 // ==== AND BTN =================================================
 
 

@@ -442,7 +442,9 @@
 
 		@media (max-width: 800px) {
 			flex: 0 1 auto;
-			margin-bottom: 25px;
+			margin-bottom: 10px;
+			display: block;
+			align-items: center;
 		}
 	}
 	&__text-wrap {
@@ -493,7 +495,15 @@
 		}
 
 		@media (max-width: 800px) {
-			display: none;
+			margin: 29px auto 0;
+			width: 100%;
+			max-width: 118px;
+			padding: 0;
+
+		}
+
+		@media (max-width: $md4+px) {
+			max-width: 91px;
 		}
 
 		& img {

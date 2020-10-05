@@ -5,7 +5,7 @@
 
 @@include('datepicker-full.min.js');
 @@include('regular.js');
-@@include('popup.js');
+
 @@include('inputmask.min.js');
 @@include('da.js');
 
