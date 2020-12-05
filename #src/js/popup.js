@@ -3,9 +3,6 @@
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
-console.log(popupLinks)
-console.log(body)
-console.log(lockPadding)
 
 let unlock = true;
 
@@ -45,7 +42,9 @@ function popupOpen(curentPopup) {
 		}
 		curentPopup.classList.add('open');
 		curentPopup.addEventListener('click', function(e) {
-			if(!e.target.closest('.popup_content')) {
+			if(e.target.closest('.popupOrder__zoom')) {
+				return
+			} else if(!e.target.closest('.popup_content')) {
 				popupClose(e.target.closest('.popup'));
 			}
 		});

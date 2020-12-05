@@ -93,6 +93,7 @@
 		border-top: 0;
 		font-size: 14px;
 		padding: 10px 0px 5px 0px;
+		max-height: 400px;
 		@media (max-width: $md2+px) {
 			font-size: 18px;
 		}

@@ -373,7 +373,8 @@ function inputs_init(inputs) {
 					},
 					onSelect: function (input, instance, date) {
 						input_focus_add(input.el);
-					}
+					},
+					minDate: new Date(),
 				});
 			}
 		}

@@ -54,6 +54,13 @@
 		}
 
 		&._isBasketOpen {
+			& .brown-btn {
+				@media (max-width: 800px) {
+					padding: 0;
+
+				}
+			}
+
 			@media (max-width: $md2+px) {
 				& .head-delivery__title {
 					opacity: 0;
@@ -170,6 +177,7 @@
 		opacity: 1;
 		transition: all .3s ease;
 		transition-delay: .2s;
+		padding: 0 10px;
 	}
 
 	&__basket {
@@ -317,6 +325,15 @@
 
 	@media (max-width: 575px) {
 		font-size: 0;
+	}
+
+	& + a {
+		padding: 12px 29px 13px 29px;
+		margin-left: 5px;
+
+		@media(max-width: 660px) {
+			padding: 12px 18px 13px 18px;
+		}
 	}
 
 /*	& span {

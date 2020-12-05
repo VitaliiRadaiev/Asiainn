@@ -46,7 +46,64 @@
 		}
 	}
 	&__banner {
-		margin: 20px 0 ;
+		margin: 20px 0;
+		position: relative;
+		& img {
+			width: 100%;
+		}
+
+		&-text {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			color: #fff;
+			font-size: 16px;
+			text-align: center;
+			background: rgba(#000, 0.3);
+			width: 100%;
+			padding: 2em 1em;
+			font-family: $mainFontFamily;
+
+			& h2 {
+				font-size: 4em;
+				margin: 0em 0 0.3em;
+			}
+
+			& h3 {
+				font-size: 3em;
+				margin: 0em 0 0.3em;
+			}
+
+
+			& h4 {
+				font-size: 2em;
+				margin: 0em 0 0.3em;
+			}
+
+			& h5 {
+				font-size: 1.5em;
+				margin: 0em 0 0.3em;
+			}
+
+			& h6 {
+				font-size: 1.5em;
+				margin: 0em 0 0.3em;
+			}
+
+			& p {
+				font-size: 1em;
+				margin: 0 0 1em;
+			}
+
+			@media (max-width: $md3+px){
+				font-size: 12px;
+			}
+
+			@media (max-width: $md4+px){
+				font-size: 8px;
+			}
+		}
 	}
 }
 .banner-event {
@@ -55,6 +112,10 @@
 	height: 0;
 	padding-bottom: 56.2%;
 	overflow: hidden;
+
+	& img {
+		width: 100%;
+	}
 
 	@media (max-width: 379px) {
 		height: auto;
@@ -107,7 +168,7 @@
 		height: 100%;
 		object-fit: cover;
 	}
-	&__decoration {
+	& img.banner-event__decoration {
 		position: absolute;
 		top: 54%;
 	    left: 34%;
@@ -153,6 +214,11 @@
 				padding-bottom: 30%;
 			}
 
+			&.show-hieroglyphs:before {
+				display: block;
+			}
+
+
 			&:before {
 				position: absolute;
 				content: '';
@@ -164,6 +230,7 @@
 				z-index: 2;
 				top: 8%;
 				left: 5%;
+				display: none;
 			}
 
 			& div {

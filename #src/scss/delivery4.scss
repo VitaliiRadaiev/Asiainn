@@ -192,6 +192,18 @@
 					transform: translateY(-50%);
 				}				
 			}
+
+			& ._date {
+				& + .qs-datepicker-container {
+					top: 50px !important;
+				}
+			}
+		}
+	}
+
+	& .input-text {
+		&:focus {
+			color: #383e43;
 		}
 	}
 

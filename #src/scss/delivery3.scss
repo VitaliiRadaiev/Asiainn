@@ -641,11 +641,15 @@
 	top: 75px;
 	right: -100%;
 	border-top: none;
-	z-index: 100;
+	z-index: 999;
 	overflow-y: auto;
 	overflow-x: hidden;
 	transition: all .4s ease;
 	transform: scale(-1);
+
+	@media (max-width: 800px) {
+		transform: scale(1);
+	}
 
 	@media (max-width: 800px) {
 		top: 60px;
@@ -673,6 +677,10 @@
 		text-align: center;
 		height: 100%;
 
+		@media (max-width: 800px) {
+			transform: scale(1);
+		}
+
 		& img {
 			width: 80px;
 			margin-bottom: 30px;
@@ -694,6 +702,10 @@
 		min-height: 100%;
 		display: flex;
 		flex-direction: column;
+
+		@media (max-width: 800px) {
+			transform: scale(1);
+		}
 
 		@media (max-width: $md4+px) {
 			width: 320px;
@@ -869,7 +881,7 @@
 		}
 
 		& .select__options {
-			height: 254px;
+			max-height: 254px;
 			overflow: auto;
 			top: 53px;
 		}
@@ -1192,12 +1204,14 @@
 	.basket__submit-wrap {
 		margin: 0 -30px 0 -25px;
 
+
 		& .aside-btn {
 			width: 100%;
 			position: relative;
 			justify-content: space-between;
 			align-items: center;
-			    padding: 15px 30px 15px 29px;
+			padding: 15px 30px 15px 29px;
+			z-index: 999;
 
 			& > span {
 				margin-left: 0;

@@ -42,9 +42,10 @@ body {
 	-webkit-text-size-adjust: 100%;
 	color: $textColor;
 	font-size: 14px;
-	opacity: 0;
+	opacity: 1;
 	transition: opacity .8s ease;
 	transition-delay: .5s;
+	background: #e1dfd9;
 	&.lock {
 		overflow: hidden;
 	}
@@ -144,6 +145,12 @@ h6 {
 //</MIXIN>===========================================================================================================
 
 
+.fancybox-navigation .fancybox-button {
+	height: 130px !important;
+	width: 100px !important;
+}
+
+
 .container-big {
 	max-width: 1630px;
 	margin: 0 auto;
@@ -171,6 +178,7 @@ h6 {
 
 .logo {
 	max-width: 244px;
+	width: 100%;
 	& img {
 		width: 100%;
 	}
@@ -215,6 +223,17 @@ h6 {
 	width: 204px;
 	min-height: 49px;
 	letter-spacing: 1px;
+	transition: all .2s ease;
+
+	@media (min-width: 992px) {
+		&:hover {
+			background: rgba(#000, 0.7);
+		}
+	}
+
+	&:active {
+		background: rgba(#000, 0.7);
+	}
 }
 
 .brown-btn {
@@ -595,11 +614,20 @@ h6 {
 
 		& > li {
 			flex: 0 0 auto;
+
+			& > a {
+				height: 26px;
+
+				& > svg {
+					height: 100%;
+				}
+			}
+
 			&:not(:last-child) {
 				margin-right: 23px;
 			}
 
-			&:nth-child(1) {
+			&:nth-child(2) {
 				& > a {
 					display:block;
 					width: 26px;
@@ -607,7 +635,7 @@ h6 {
 				}
 			}
 
-			&:nth-child(2) {
+			&:nth-child(1) {
 				& > a {
 					display:block;
 					width: 12px;
@@ -861,7 +889,7 @@ h6 {
 
 		& .select__options {
 			overflow: auto;
-			height: 490px;
+			max-height: 490px;
 		}
 	}
 	&__select {
@@ -898,11 +926,36 @@ h6 {
 		padding: 60px 15px 60px;
 	}
 
+	&.register {
+		margin: 0 !important;
+		padding: 60px 65px 60px !important;
+		font-family: "Montserrat", serif;
+
+		@media (max-width: $md4+px) {
+			padding: 60px 15px 60px !important;
+		}
+	}
+
+	&.login {
+		margin: 0 !important;
+		padding: 60px 65px 60px !important;
+		font-family: "Montserrat", serif;
+
+		@media (max-width: $md4+px) {
+			padding: 60px 15px 60px !important;
+		}
+	}
+
+	& .agreement {
+		text-align: center;
+	}
+
 	&__title {
 		font-size: 28px;
 		font-weight: 700;
 		margin-bottom: 46px;
 		letter-spacing: 1px;
+		text-align: center;
 
 		& > a {
 			color: #767676;
@@ -1120,6 +1173,62 @@ h6 {
 
 
 //===== popup order ===============================================
+.popupOrder {
+	&__zoom {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+		background: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all .2s ease;
+		visibility: hidden;
+		opacity: 0;
+		z-index: 51;
+
+		&.open {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		&-close {
+			position: absolute;
+			top: 24px;
+			right: 26px;
+			width: 28px;
+			height: 18px;
+			cursor: pointer;
+
+			& img {
+				width: 100%;
+			}
+		}
+
+		&-img {
+			height: 80%;
+			width: 90%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: zoom-out;
+
+			@media (max-width: 575px) {
+				height: 75%;
+				width: 100%;
+			}
+
+			& img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+	}
+}
+
 .form-order2 {
 	font-family: "Akrobat", serif;
 	color: #000;
@@ -1171,7 +1280,7 @@ h6 {
 	&__img {
 		width: 100%;
 		height: 100%;
-
+		cursor: zoom-in;
 		@media (max-width: $md3+px) {
 			width: 250px;
 			height: 250px;
@@ -1260,4 +1369,142 @@ h6 {
 	font-weight: 400;
 	max-width: 561px;
 	margin: 25px auto;
+}
+
+.privacy-policy {
+	.container-normal {
+		margin-top: 10px;
+		margin-bottom: 50px;
+	}
+
+	& h1 {
+		margin-top: 30px;
+		color: #000;
+		   font-family: 'Montserrat', serif;
+		    font-size: 26px;
+		    font-weight: 700;
+		    line-height: 44px;
+		    text-transform: uppercase;
+		    margin-bottom: 15px;
+	}
+
+	& h2 {
+		margin-top: 30px;
+		color: #000;
+		    font-family: 'OpelSans', serif;
+		    font-size: 20px;
+		    font-weight: 700;
+		    line-height: 30px;
+		    text-transform: uppercase;
+		    margin-bottom: 10px;
+
+		    @media (max-width: $md3+px) {
+		    	font-size: 24px;
+		    }	
+		}
+
+	& h3 {
+		margin-top: 10px;
+		color: #000;
+		    font-family: 'OpelSans', serif;
+		    font-size: 18px;
+		    font-weight: 700;
+		    line-height: 22px;
+		    margin-bottom: 5px;
+	}	
+
+	& p {
+		    color: #000;
+		    font-family: 'OpelSans', serif;
+		    font-size: 16px;
+		    font-weight: 400;
+		    line-height: 28px;
+		    margin: 0px 0 25px;
+	}	
+}
+
+
+// ====================
+.wpcf7-not-valid-tip {
+    padding: 0px 10px 10px;
+    text-align: center;
+}
+
+.woocommerce-ResetPassword {
+	& > p {
+		padding-left: 4px;
+		padding-right: 4px;
+
+		&:first-child {
+			font-size: 18px;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+	}
+
+	& .woocommerce-Input  {
+		min-height: 40px;
+		padding: 5px 10px;
+
+		color: #a5a5a5;
+		font-size: 18px;
+		font-weight: 400;
+		letter-spacing: 1px;
+
+		&:focus {
+			color: #000;
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: 1px;
+		}
+	}
+
+	& .woocommerce-Button.button  {
+		background-color: #43b749;
+		color: #fff;
+		@include title(16,700,16);
+		padding: 10px 15px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-height: 45px;
+		letter-spacing: 1px;
+		transition: all .2s ease;
+		color: #fff;
+
+		&:hover {
+			background: rgba(#43b749, 0.7);
+		}
+
+		&:active {
+			background: rgba(#43b749, 0.7);
+		}
+	}
+
+	& .form-row-first {
+		float: none !important;
+	}
+	& .form-row-last {
+		float: none !important;
+	}
+
+	& .woocommerce-form-row  {
+		width: 100% !important;
+		max-width: 705px;
+		margin-right: auto !important;
+		margin-left: auto !important;
+	}
+}
+
+.wpcf7-form {
+	& .hide-input {
+		pointer-events: none;
+	}
+}
+
+.woocommerce-lost-password {
+	& .head-delivery__title {
+		padding-right: 3%;
+	}
 }
